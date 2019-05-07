@@ -57,14 +57,7 @@ def save
   end
   
   def self.find_by(attribute)
-    attribute_key = attribute.keys.join()
-    attrubute_value = attribute.values.first
-    sql =<<-SQL
-      SELECT * FROM #{self.table_name}
-      WHERE #{attribute.key} = #{attrubute_value}
-      LIMIT 1
-    SQL
-    row = DB[:conn].execute(sql)
+   
   end
 
 end
