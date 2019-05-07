@@ -8,6 +8,7 @@ class InteractiveRecord
   end
   
   
+  
   #def initialize(student={})
   #student.each do |key, value|
   #  self.send("#{key}=", value)
