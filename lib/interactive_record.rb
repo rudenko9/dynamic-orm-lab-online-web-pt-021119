@@ -53,13 +53,6 @@ def save
 end
   
   
-  def self.find_by(attribute)
-    key = attribute.keys[0]
-    value = attribute.values[0]
-    
-   sql = "SELECT * FROM #{self.table_name} WHERE #{key} = ?"
-   
-    DB[:conn].execute(sql,value)
-  end
+ 
 
 end
