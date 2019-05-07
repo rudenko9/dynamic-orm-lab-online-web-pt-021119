@@ -62,7 +62,7 @@ def save
     attrubute_value = attribute.values.first
     sql =<<-SQL
       SELECT * FROM #{self.table_name}
-      WHERE attribute = '
+      WHERE #{attribute.key} = '
       LIMIT 1
     SQL
     row = DB[:conn].execute(sql)
