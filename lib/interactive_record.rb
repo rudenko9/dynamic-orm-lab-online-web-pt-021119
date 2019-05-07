@@ -57,8 +57,12 @@ def save
   
   
   def self.find_by(attribute)
-   sql = "SELECT * FROM #{self.table_name} WHERE #{attribute.keys.first} = ?"
-    DB[:conn].execute(sql,attribute.values.first)
+    key = attribute.keys[0]
+    value = attribute.values[0]
+    
+   sql = "SELECT * FROM #{self.table_name} WHERE #{key} = ?"
+   
+    DB[:conn].execute(sql,value)
   end
 
 end
