@@ -56,6 +56,7 @@ def save
     sql = "SELECT * FROM #{self.table_name} WHERE name = ?"
     row = DB[:conn].execute(sql,name)
   end
+  
   def self.find_by(attribute)
     attribute_key = attribute.keys.join()
     attrubute_value = attribute.values.first
