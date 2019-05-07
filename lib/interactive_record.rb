@@ -18,10 +18,10 @@ class InteractiveRecord
   column_names.compact
  end 
   
-  #def initialize(student={})
-  #student.each do |key, value|
-  #  self.send("#{key}=", value)
-  #end
-#end
+  def initialize(student={})
+  student.each do |key, value|
+    self.send("#{key}=", value)
+  end
+  end
 
 end
